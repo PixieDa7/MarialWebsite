@@ -450,7 +450,39 @@ html {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: var(--primary-color);
+    background: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color) var(--timeline-progress, 0%), var(--bg-light) var(--timeline-progress, 0%));
+    transition: --timeline-progress 0.3s ease;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background: linear-gradient(
+        to bottom,
+        #2563eb 0%,
+        #3b82f6 25%,
+        #60a5fa 50%,
+        #93c5fd 75%,
+        #dbeafe 100%
+    );
+    animation: timelineGrow 2s ease-out forwards;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+    z-index: 1;
+}
+
+@keyframes timelineGrow {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: 100%;
+        opacity: 1;
+    }
 }
 
 .timeline-item {
@@ -482,6 +514,34 @@ html {
     background-color: var(--primary-color);
     border: 4px solid var(--bg-white);
     box-shadow: 0 0 0 2px var(--primary-color);
+    animation: markerPulse 2s ease-in-out infinite;
+    z-index: 3;
+}
+
+@keyframes markerPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 2px var(--primary-color), 0 0 0 0 rgba(37, 99, 235, 0.4);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 2px var(--primary-color), 0 0 0 8px rgba(37, 99, 235, 0);
+    }
+}
+
+.timeline-item.visible .timeline-marker {
+    animation: markerPulse 2s ease-in-out infinite, markerAppear 0.6s ease-out;
+}
+
+@keyframes markerAppear {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .timeline-content {
