@@ -27,6 +27,18 @@ document.addEventListener('DOMContentLoaded', function() {
         item.style.animationDelay = `${index * 0.15}s`;
     });
 
+    // Observe education and certification cards for animations
+    const educationCard = document.querySelector('.education-card');
+    if (educationCard) {
+        observer.observe(educationCard);
+    }
+
+    const certCategories = document.querySelectorAll('.cert-category');
+    certCategories.forEach((category, index) => {
+        observer.observe(category);
+        category.style.transitionDelay = `${index * 0.1}s`;
+    });
+
     // Hamburger Menu Toggle
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
