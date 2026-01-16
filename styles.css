@@ -1079,12 +1079,16 @@ footer {
         left: 10px;
     }
 
+    .timeline::after {
+        left: 10px;
+    }
+
     .timeline-item {
         padding-left: 40px;
     }
 
     .timeline-marker {
-        left: 2px;
+        left: 1px;
     }
 
     .skills-grid,
