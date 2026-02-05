@@ -10,16 +10,13 @@
     --accent-color: #3b82f6;
     --text-dark: #1f2937;
     --text-light: #6b7280;
-    --bg-light: #f8fafc;
+    --bg-light: #f9fafb;
     --bg-white: #ffffff;
-    --bg-gradient-start: #f0f9ff;
-    --bg-gradient-end: #e0f2fe;
     --border-color: #e5e7eb;
     --success-color: #10b981;
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
@@ -71,8 +68,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background: linear-gradient(to bottom, var(--bg-gradient-start), var(--bg-gradient-end));
-    background-attachment: fixed;
+    background-color: var(--bg-white);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -229,10 +225,12 @@ html {
 }
 
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #5b7c99 0%, #7a9ab8 100%);
     color: white;
-    padding: 6rem 2rem;
+    padding: 8rem 2rem 6rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -359,9 +357,9 @@ color: var(--primary-color);
 }
 
 .hrandme-section {
-padding: 4rem 2rem;
-background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-text-align: center;
+    padding: 4rem 2rem;
+    background-color: #e8f0f7;
+    text-align: center;
 }
 
 .hrandme-content {
@@ -370,45 +368,45 @@ margin: 0 auto;
 }
 
 .hrandme-icon {
-font-size: 3rem;
-color: white;
-margin-bottom: 1rem;
-animation: float 3s ease-in-out infinite;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-0%, 100% {
-transform: translateY(0);
-}
-50% {
-transform: translateY(-10px);
-}
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .hrandme-section h3 {
-font-size: 2rem;
-color: white;
-margin-bottom: 1rem;
-font-weight: 700;
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .hrandme-section p {
-font-size: 1.125rem;
-color: rgba(255, 255, 255, 0.95);
-margin-bottom: 2rem;
-line-height: 1.6;
+    font-size: 1.125rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 .hrandme-section .btn {
-background-color: white;
-color: var(--primary-color);
-font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
 }
 
 .hrandme-section .btn:hover {
-background-color: rgba(255, 255, 255, 0.9);
-transform: translateY(-3px) scale(1.05);
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background-color: var(--secondary-color);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
 }
 
 .hrandme-section .btn i {
@@ -499,11 +497,10 @@ margin: 0 auto;
 }
 
 .skill-card {
-    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
-    padding: 2.5rem 2rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid rgba(37, 99, 235, 0.08);
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     opacity: 0;
@@ -529,8 +526,7 @@ margin: 0 auto;
 
 .skill-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: var(--shadow-xl), 0 0 30px rgba(37, 99, 235, 0.15);
-    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: var(--shadow-lg), 0 0 20px rgba(37, 99, 235, 0.2);
 }
 
 .skill-card:hover .skill-icon {
@@ -593,19 +589,17 @@ margin: 0 auto;
 }
 
 .experience-card {
-    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
-    padding: 2.5rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid rgba(37, 99, 235, 0.08);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
     text-align: center;
 }
 
 .experience-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: var(--shadow-xl), 0 0 30px rgba(37, 99, 235, 0.12);
-    border-color: rgba(37, 99, 235, 0.15);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
 }
 
 .experience-icon {
@@ -780,31 +774,19 @@ margin: 0 auto;
 .achievements li::before {
     content: '▸';
     position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
-.educ.about {
-padding: 5rem 2rem;
-background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
-position: relative;
-}
-
-.about::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-image: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.03) 0%, transparent 50%),
-radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.03) 0%, transparent 50%);
-pointer-events: none;
+.education {
+    padding: 5rem 2rem;
+    background-color: var(--bg-light);
 }
 
 .education h2 {
-font-size: 2.5rem;
-text-align: center;
-margin-bottom: 3rem;
-color: var(--text-dark);
+    font-size: 2.5rem;
+    text-align: center;
     margin-bottom: 3rem;
     color: var(--text-dark);
 }
@@ -812,11 +794,10 @@ color: var(--text-dark);
 .education-card {
     max-width: 700px;
     margin: 0 auto;
-    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
-    padding: 3rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(37, 99, 235, 0.08);
+    background-color: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
@@ -883,11 +864,10 @@ color: var(--text-dark);
 }
 
 .cert-category {
-    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
-    padding: 2.5rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid rgba(37, 99, 235, 0.08);
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     transform: translateY(30px);
@@ -962,12 +942,13 @@ color: var(--text-dark);
 }
 
 .award-item {
-    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
-    padding: 2.5rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
-    border: 1px solid rgba(37, 99, 235, 0.08);
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
     position: relative;
     overflow: hidden;
 }
@@ -1005,7 +986,7 @@ color: var(--text-dark);
 }
 
 .contact-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #5b7c99 0%, #7a9ab8 100%);
     color: white;
     padding: 4rem 2rem;
     text-align: center;
