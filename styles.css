@@ -10,13 +10,16 @@
     --accent-color: #3b82f6;
     --text-dark: #1f2937;
     --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    --bg-light: #f8fafc;
     --bg-white: #ffffff;
+    --bg-gradient-start: #f0f9ff;
+    --bg-gradient-end: #e0f2fe;
     --border-color: #e5e7eb;
     --success-color: #10b981;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 [data-theme="dark"] {
@@ -68,7 +71,8 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--bg-white);
+    background: linear-gradient(to bottom, var(--bg-gradient-start), var(--bg-gradient-end));
+    background-attachment: fixed;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -495,10 +499,11 @@ margin: 0 auto;
 }
 
 .skill-card {
-    background-color: var(--bg-white);
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(37, 99, 235, 0.08);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     opacity: 0;
@@ -524,7 +529,8 @@ margin: 0 auto;
 
 .skill-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: var(--shadow-lg), 0 0 20px rgba(37, 99, 235, 0.2);
+    box-shadow: var(--shadow-xl), 0 0 30px rgba(37, 99, 235, 0.15);
+    border-color: rgba(37, 99, 235, 0.2);
 }
 
 .skill-card:hover .skill-icon {
@@ -587,17 +593,19 @@ margin: 0 auto;
 }
 
 .experience-card {
-    background-color: var(--bg-light);
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(37, 99, 235, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
 }
 
 .experience-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl), 0 0 30px rgba(37, 99, 235, 0.12);
+    border-color: rgba(37, 99, 235, 0.15);
 }
 
 .experience-icon {
@@ -772,19 +780,31 @@ margin: 0 auto;
 .achievements li::before {
     content: '▸';
     position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
 }
 
-.education {
-    padding: 5rem 2rem;
-    background-color: var(--bg-light);
+.educ.about {
+padding: 5rem 2rem;
+background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+position: relative;
+}
+
+.about::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.03) 0%, transparent 50%),
+radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.03) 0%, transparent 50%);
+pointer-events: none;
 }
 
 .education h2 {
-    font-size: 2.5rem;
-    text-align: center;
+font-size: 2.5rem;
+text-align: center;
+margin-bottom: 3rem;
+color: var(--text-dark);
     margin-bottom: 3rem;
     color: var(--text-dark);
 }
@@ -792,10 +812,11 @@ margin: 0 auto;
 .education-card {
     max-width: 700px;
     margin: 0 auto;
-    background-color: var(--bg-white);
-    padding: 2.5rem;
-    border-radius: 0.75rem;
-    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(37, 99, 235, 0.08);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
@@ -862,10 +883,11 @@ margin: 0 auto;
 }
 
 .cert-category {
-    background-color: var(--bg-light);
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(37, 99, 235, 0.08);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     transform: translateY(30px);
@@ -940,13 +962,12 @@ margin: 0 auto;
 }
 
 .award-item {
-    background-color: var(--bg-white);
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(135deg, var(--bg-white) 0%, #fefefe 100%);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(37, 99, 235, 0.08);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
     position: relative;
     overflow: hidden;
 }
