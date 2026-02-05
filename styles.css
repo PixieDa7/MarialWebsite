@@ -369,7 +369,7 @@ html {
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     margin-bottom: 1.5rem;
     color: var(--text-dark);
 }
@@ -389,7 +389,7 @@ html {
 }
 
 .intro {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: var(--text-light);
 }
@@ -438,14 +438,14 @@ html {
 }
 
 .hrandme-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     color: white;
     margin-bottom: 1.5rem;
     font-weight: 700;
 }
 
 .hrandme-section p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     color: rgba(255, 255, 255, 0.95);
     line-height: 1.8;
     margin-bottom: 2rem;
@@ -456,7 +456,7 @@ html {
     color: #667eea;
     font-weight: 600;
     padding: 1rem 2rem;
-    font-size: 1.125rem;
+    font-size: 1rem;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -475,7 +475,7 @@ html {
 }
 
 .skills h2 {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     text-align: center;
     margin-bottom: 3rem;
     color: var(--text-dark);
@@ -556,7 +556,7 @@ html {
 }
 
 .experience h2 {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     text-align: center;
     margin-bottom: 1rem;
     color: var(--text-dark);
@@ -564,7 +564,7 @@ html {
 
 .section-intro {
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-light);
     max-width: 700px;
     margin: 0 auto 3rem;
@@ -615,7 +615,7 @@ html {
 }
 
 .experience-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     color: var(--text-dark);
     margin-bottom: 1rem;
 }
@@ -623,7 +623,7 @@ html {
 .experience-card p {
     color: var(--text-light);
     line-height: 1.7;
-    font-size: 1rem;
+    font-size: 0.875rem;
 }
 
 .timeline {
@@ -745,14 +745,14 @@ html {
 }
 
 .timeline-header h3 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
 
 .company {
     display: block;
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 0.25rem;
@@ -791,7 +791,7 @@ html {
 }
 
 .education h2 {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     text-align: center;
     margin-bottom: 3rem;
     color: var(--text-dark);
@@ -831,20 +831,20 @@ html {
 }
 
 .education-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
 
 .honors {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--success-color);
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .institution {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-light);
     margin-bottom: 0.5rem;
 }
@@ -855,7 +855,7 @@ html {
 }
 
 .certifications h2 {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     text-align: center;
     margin-bottom: 3rem;
     color: var(--text-dark);
@@ -900,7 +900,7 @@ html {
 }
 
 .cert-category h3 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     border-bottom: 2px solid var(--primary-color);
@@ -933,7 +933,7 @@ html {
 }
 
 .awards h2 {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     text-align: center;
     margin-bottom: 3rem;
     color: var(--text-dark);
@@ -980,7 +980,7 @@ html {
 }
 
 .award-item h4 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
@@ -1041,7 +1041,7 @@ html {
 }
 
 .info-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
 }
