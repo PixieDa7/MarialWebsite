@@ -579,6 +579,14 @@ html {
     margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
 .experience-card {
     background-color: var(--bg-light);
     padding: 2rem;
